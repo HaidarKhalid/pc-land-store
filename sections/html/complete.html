@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <!-- cairo font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="../css/complete.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pc Land Store</title>
+    <script defer src="../js/complete.js"></script>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("OxLdeYSzupOhFmWT4");
+        })();
+    </script>
+
+</head>
+<body>
+    <!-- background image -->
+    <img class="background" src="../../images/bg-pc-land.jpeg">
+
+    <!--main work-->
+
+    <nav class="navbar">
+        <div>
+            <a href="../../index.html"><iconify-icon icon="material-symbols:home-outline-rounded" style="color: white;" width="30"></iconify-icon></a>
+        </div>
+        <div>
+        <h3>اتمام الطلب</h3>
+        </div>
+    </nav>
+    <br>
+    <div class="products-div">
+        <label>الاسم</label>
+        <br>
+        <input dir="rtl" class="input" type="text" name="name" id="user-name">
+        <br>
+        <label>الرقم</label>
+        <br>
+        <input class="input"  type="text" name="number" id="user-number">
+        <br>
+        <label>العنوان</label>
+        <br>
+        <input dir="rtl" class="input" type="text" name="location" id="user-location">
+        <br>
+        <label>المنتجات (فقط للاطلاع)</label>
+        <br>
+        <textarea style="resize: none; color: var(--main2); font-weight: bold;" dir="rtl" class="input"  name="user-products" id="user-products" cols="30" rows="6" disabled ></textarea>
+        <br>
+        <label>ملاحظات ؟</label>
+        <br>
+        <textarea style="resize: vertical;" dir="rtl" class="input" name="message" id="user-message" cols="30" rows="6"></textarea>
+        <br>
+        <br>
+        <div class="check-this">
+        <h2 class="check" dir="rtl"><iconify-icon icon="carbon:dot-mark" style="color: #3db32a;" width="40"></iconify-icon> يرجى عدم وضع معلومات غير صحيحة</h2>
+        <h2 class="check" dir="rtl"><iconify-icon icon="carbon:dot-mark" style="color: #3db32a;" width="40"></iconify-icon> سوف نقوم بالاتصال بالرقم المرفق في الاعلى للتاكد من معلومات الطلب</h2>
+        <h2 class="check" dir="rtl"><iconify-icon icon="carbon:dot-mark" style="color: #3db32a;" width="40"></iconify-icon> الدفع عند الاستلام</h2>
+        <h2 class="check" dir="rtl"><iconify-icon icon="carbon:dot-mark" style="color: #3db32a;" width="40"></iconify-icon> كلفة التوصيل داخل العاصمة بغداد 5 الاف د.ع</h2>
+        <h2 class="check" dir="rtl"><iconify-icon icon="carbon:dot-mark" style="color: #3db32a;" width="40"></iconify-icon> كلفة التوصيل خارج العاصمة بغداد 10 الاف د.ع</h2>
+        </div>
+        <br> <br>
+        <button class="sendBtn" onclick="sendMail()">ارسال</button>
+    </div>
+
+    <!-- IconifyIcon web component -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.3/iconify-icon.min.js"></script>
+    <!-- smtp js -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</body>
+</html>
